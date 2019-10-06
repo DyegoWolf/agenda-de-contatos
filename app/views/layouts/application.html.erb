@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Partial cabeçalho -->
+    <%= render 'layouts/header' %>
+
+    <div class = "container">
+      <!-- Injeta na página o que vier dos controlers -->
+      <%= yield %>
+    </div>
+
+    <!-- Partial rodapé -->
+    <%= render 'layouts/footer' %>
+
   </body>
 </html>
