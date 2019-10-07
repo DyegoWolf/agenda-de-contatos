@@ -1,7 +1,15 @@
 class StaticPagesController < ApplicationController
 
   def index
-    @nome = "Dyego Wolf das Trevas"
+    
+  end
+
+  def sobre
+
+  end
+
+  def contato
+
   end
 
 end
