@@ -1,6 +1,12 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
+  # A variável kind_options_for_select recebe
+  # todos os tipos cadastrados em Kind
+  def options_for_select
+    @kind_options_for_select = Kind.all
+  end
+
   # GET /contacts
   # GET /contacts.json
   def index
@@ -15,10 +21,12 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
+    options_for_select
   end
 
   # GET /contacts/1/edit
   def edit
+    options_for_select
   end
 
   # POST /contacts
